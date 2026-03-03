@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="GeoNarrative Template" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>GeoNarrative Template</title>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/main.css">
+  <script src="https://unpkg.com/scrollama"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js"></script>
+</head>
+
+<body>
+  <!-- cover page -->
+  <section id="cover">
+    <video class="fullscreen canvas-center" playsinline="" autoplay="" muted="" loop="">
+      <source src="assets/intro.mp4" type="video/mp4">
+    </video>
+    <div id="intro">
+      <h1>Seattle Traffic & Environmental Impact</h1>
+      <h5>This line is a place holder for subtitle</h5>
+      <p>Washington is renowned for its lush, green landscapes—but how does Seattle's bustling urban transportation network affect the environmental conditions of surrounding neighborhoods? This interactive study explores the spatial relationship between high-traffic road networks, pollution exposure, and Seattle's urban greenery.</p>
+
+      <div class="footnote">
+        <span> This line is a place holder for copyright note or other footnotes.</span>
+        <a target="_blank" href="https://www.uw.edu"> <img src="img/uw_logo.png" width="50px"></a>
+      </div>
+    </div>
+  </section>
+  <section id="geonarrative">
+    <div id="storyboard">
+      <div id="map"></div>
+    </div>
+    <article class="scene" data-scene="0">
+            <h2><i class="bi bi-signpost-2"></i> Seattle's Traffic Network</h2>
+            <p>Seattle's road network serves over 750,000 residents and handles millions of vehicle trips annually. Our analysis focuses on high-traffic corridors where vehicle movement is most concentrated.</p>
+            <p>The map shows traffic flow intensity across major roads, with colors indicating Annual Average Daily Traffic (AWDT). Notice how traffic concentrates along key arterials connecting downtown to surrounding neighborhoods.</p>
+            
+            <div class="viz-link">
+                <i class="bi bi-info-circle"></i> <strong>Interactive Feature:</strong> Click on any road segment to see detailed traffic volume information.
+            </div>
+            
+            <div class="key-findings">
+                <h4>Key Patterns to Observe</h4>
+                <ul>
+                    <li><span style="color: #E63946; font-weight: bold;">Red lines</span> indicate very high traffic (30,000+ vehicles/day)</li>
+                    <li><span style="color: #F77F00; font-weight: bold;">Orange lines</span> show high traffic (15,000-30,000)</li>
+                    <li><span style="color: #FCBF49; font-weight: bold;">Yellow lines</span> represent medium traffic (5,000-15,000)</li>
+                    <li><span style="color: #2D5F3F; font-weight: bold;">Green lines</span> indicate low traffic (0-5,000)</li>
+                    <li>I-5 corridor shows highest traffic volumes</li>
+                    <li>Major east-west routes (520, I-90) have significant flow</li>
+                </ul>
+            </div>
+    </article>
+    <!-- add other maps here NEED TO WORK ON -->
+    <!-- <article class="scene" data-scene="2">
+      <h2></h2>
+    </article>
+    <article class="scene" data-scene="3">
+      <h2></h2>
+    </article>
+    <article class="scene" data-scene="4"> -->
+      <!-- <h2></h2>  -->
+      <p>
+      </p>
+      <hr>
+      <div>
+        <p><i class="bi bi-person"></i> <span>2,823</span>
+        </p>
+        <p><i class="bi bi-map"></i> <span>3,520</span>
+        </p>
+      </div>
+    </article>
+    <article class="scene" data-scene="5">
+      <h2>STEP 6: Image </h2>
+      <img src="img/portland.jpg"></img>
+    </article>
+    <article class="scene fullscreen" data-scene="6">
+      <h2>STEP 7: Ending Page</h2>
+    </article>
+
+  </section>
+
+  <section id="footer">
+    <h2>FOOTER</h2>
+  </section>
+
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
