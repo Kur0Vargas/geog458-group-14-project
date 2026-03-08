@@ -245,23 +245,22 @@ async function geojsonFetch() {
           map.addLayer(aqiLayer);
         }
       } else if (index === 3) {
-        document.getElementById("traffic-legend").style.display = "block";
-        document.getElementById("aqi-legend").style.display = "block";
-        map.flyTo({
-          center: [-122.724366, 45.5428119],
-          zoom: 12,
-          pitch: 60,
-          speed: 0.5
-        });
-        map.setStyle('mapbox://styles/mapbox/satellite-streets-v10');
-
-      } else if (index === 6) {
         map.flyTo({
           center: [-122.4121036, 47.6131229],
           zoom: 12,
           pitch: 0,
           speed: 0.5
         });
+
+        if (!map.getLayer('traffic-flow-lines')) {
+          map.addLayer(trafficLayer);
+        }
+        if (!map.getLayer('aqi-circles')) {
+          map.addLayer(aqiLayer);
+        }
+        map.setFilter('aqi-circles', null);
+
+      } else if (index === 4) {
       }
     }
 
@@ -290,9 +289,14 @@ async function geojsonFetch() {
         }
 
       } else if (index === 3) {
+        if (map.getLayer('traffic-flow-lines')) {
+          map.removeLayer('traffic-flow-lines');
+        }
+        if (map.getLayer('aqi-circles')) {
+          map.removeLayer('aqi-circles');
+        }
         document.getElementById("traffic-legend").style.display = "none";
         document.getElementById("aqi-legend").style.display = "none";
-        map.setStyle('mapbox://styles/mapbox/light-v10');
       }
     }
 
