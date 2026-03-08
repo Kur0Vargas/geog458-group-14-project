@@ -1,4 +1,4 @@
-let map, scriptPanel = scrollama(), seattleLayer, trafficLayer;
+let map, scriptPanel = scrollama(), seattleLayer, trafficLayer, aqiLayer;
 
 history.scrollRestoration = "manual";
 window.scrollTo(0, 0);
@@ -39,6 +39,8 @@ async function geojsonFetch() {
   let response, traffic;
   response = await fetch("assets/traffic-flow-counts-2022.geojson");
   traffic = await response.json();
+  response = await fetch("assets/WA_AQI_2022.json")
+  aqi = await response.json();
 
   map.on('load', () => {
 
@@ -63,6 +65,11 @@ async function geojsonFetch() {
     map.addSource('traffic-src', {
       type: 'geojson',
       data: traffic
+    });
+
+    map.addSource('aqi-src', {
+      type: 'geojson',
+      data: aqi
     });
 
     seattleLayer = {
@@ -99,6 +106,34 @@ async function geojsonFetch() {
       }
     };
 
+    aqiLayer = {
+      'id': 'aqi-circles',
+      'type': 'circle',
+      'source': 'aqi-src',
+      'paint': {
+        'circle-radius': [
+          'interpolate', ['linear'], ['get', 'days_unhealthy_or_worse'],
+          0, 5,
+          10, 10,
+          20, 18
+        ],
+        'circle-color': [
+          'interpolate', ['linear'],
+          ['/', 
+            ['*', ['get', 'days_unhealthy_or_worse'], 100], 
+            ['get', 'total_days']
+          ],
+          0, '#2D5F3F',
+          2, '#FCBF49',
+          5, '#F77F00',
+          10, '#E63946'
+        ],
+        'circle-opacity': 0.85,
+        'circle-stroke-width': 1,
+        'circle-stroke-color': '#fff'
+      }
+    };
+
     map.on('click', 'traffic-flow-lines', function(e) {
       const properties = e.features[0].properties;
       let year = 'Unknown';
@@ -123,6 +158,21 @@ async function geojsonFetch() {
     map.on('mouseleave', 'traffic-flow-lines', function() {
       map.getCanvas().style.cursor = '';
     });
+    map.on('click', 'aqi-circles', function(e) {
+      const p = e.features[0].properties;
+      new mapboxgl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML(`
+          <h3>${p.station}</h3>
+          <p><strong>Good days:</strong> ${p.good_days}</p>
+          <p><strong>Moderate days:</strong> ${p.moderate_days}</p>
+          <p><strong>Unhealthy or worse:</strong> ${p.days_unhealthy_or_worse}</p>
+          <p><strong>Total days recorded:</strong> ${p.total_days}</p>
+        `)
+        .addTo(map);
+    });
+    map.on('mouseenter', 'aqi-circles', () => map.getCanvas().style.cursor = 'pointer');
+    map.on('mouseleave', 'aqi-circles', () => map.getCanvas().style.cursor = '');
 
     scriptPanel
       .setup({
@@ -177,14 +227,26 @@ async function geojsonFetch() {
         }
 
       } else if (index === 2) {
+        document.getElementById("aqi-legend").style.display = "block";
         map.flyTo({
-          center: [-122.4121036, 47.6131229],
-          zoom: 12,
+          center: [-120.5, 47.5], 
+          zoom: 7,
           pitch: 0,
           speed: 0.5
         });
 
+        if (typeof map.getSource('aqi-src') == 'undefined') {
+          map.addSource('aqi-src', { type: 'geojson', data: aqi });
+        } else {
+          map.getSource('aqi-src').setData(aqi);
+        }
+
+        if (!map.getLayer('aqi-circles')) {
+          map.addLayer(aqiLayer);
+        }
       } else if (index === 3) {
+        document.getElementById("traffic-legend").style.display = "block";
+        document.getElementById("aqi-legend").style.display = "block";
         map.flyTo({
           center: [-122.724366, 45.5428119],
           zoom: 12,
@@ -221,8 +283,15 @@ async function geojsonFetch() {
         if (map.getLayer("traffic-flow-lines")) {
           map.removeLayer('traffic-flow-lines');
         }
+      } else if (index === 2) {
+        document.getElementById("aqi-legend").style.display = "none";
+        if (map.getLayer('aqi-circles')) {
+          map.removeLayer('aqi-circles');
+        }
 
       } else if (index === 3) {
+        document.getElementById("traffic-legend").style.display = "none";
+        document.getElementById("aqi-legend").style.display = "none";
         map.setStyle('mapbox://styles/mapbox/light-v10');
       }
     }
