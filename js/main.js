@@ -111,23 +111,32 @@ async function geojsonFetch() {
       'type': 'circle',
       'source': 'aqi-src',
       'paint': {
-        'circle-radius': [
-          'interpolate', ['linear'], ['get', 'days_unhealthy_or_worse'],
-          0, 5,
-          10, 10,
-          20, 18
+      'circle-color': [
+        'interpolate', ['linear'],
+        ['/', 
+          ['*', ['get', 'days_unhealthy_or_worse'], 100], 
+          ['get', 'total_days']
         ],
-        'circle-color': [
-          'interpolate', ['linear'],
-          ['/', 
-            ['*', ['get', 'days_unhealthy_or_worse'], 100], 
-            ['get', 'total_days']
-          ],
-          0, '#2D5F3F',
-          2, '#FCBF49',
-          5, '#F77F00',
-          10, '#E63946'
+        0, '#2D5F3F',    // 0% - Good
+        1, '#FCBF49',    // 1% - starting to show issues
+        3, '#F77F00',    // 3% - moderate concern
+        6, '#E63946',    // 6% - unhealthy
+        10, '#7B2D8B',   // 10% - very unhealthy
+        15, '#7E0023'    // 15%+ - hazardous
+      ],
+
+      'circle-radius': [
+        'interpolate', ['linear'],
+        ['/', 
+          ['*', ['get', 'days_unhealthy_or_worse'], 100], 
+          ['get', 'total_days']
         ],
+        0, 5,
+        3, 8,
+        6, 12,
+        10, 16,
+        15, 22
+      ],
         'circle-opacity': 0.85,
         'circle-stroke-width': 1,
         'circle-stroke-color': '#fff'
@@ -261,6 +270,40 @@ async function geojsonFetch() {
         map.setFilter('aqi-circles', null);
 
       } else if (index === 4) {
+        map.setStyle('mapbox://styles/mapbox/navigation-day-v1');
+        
+        map.once('style.load', () => {
+          map.flyTo({
+            center: [-122.42, 47.756],
+            zoom: 12,
+            pitch: 45,
+            bearing: -10,
+            speed: 0.5
+          });
+
+          map.addSource('traffic-src', { type: 'geojson', data: traffic });
+          map.addLayer(trafficLayer);
+          document.getElementById("traffic-legend").style.display = "block";
+        });
+        document.getElementById("traffic-legend").style.display = "block";
+      } else if (index === 5) {
+        map.flyTo({
+          center: [-122.43, 47.52],
+          zoom: 14,
+          pitch: 45,
+          bearing: -10,
+          speed: 0.5
+        });
+
+        if (typeof map.getSource('aqi-src') == 'undefined') {
+          map.addSource('aqi-src', { type: 'geojson', data: aqi });
+        }
+
+        if (!map.getLayer('aqi-circles')) {
+          map.addLayer(aqiLayer);
+        }
+
+        document.getElementById("aqi-legend").style.display = "block";
       }
     }
 
@@ -297,7 +340,38 @@ async function geojsonFetch() {
         }
         document.getElementById("traffic-legend").style.display = "none";
         document.getElementById("aqi-legend").style.display = "none";
+      } else if (index === 4) {
+        if (map.getLayer('traffic-flow-lines')) {
+          map.removeLayer('traffic-flow-lines');
+        }
+        document.getElementById("traffic-legend").style.display = "none";
+      } else if (index === 5) {
+        document.getElementById("aqi-legend").style.display = "none";
+        map.setStyle('mapbox://styles/mapbox/dark-v10');
+
+        map.once('style.load', () => {
+          map.addSource('traffic-src', { type: 'geojson', data: traffic });
+          map.addSource('aqi-src', { type: 'geojson', data: aqi });
+          map.addSource('seattle-bounds', {
+            type: 'geojson',
+            data: {
+              type: 'Feature',
+              properties: {},
+              geometry: {
+                type: 'Polygon',
+                coordinates: [[
+                  [-122.459696, 47.481002],
+                  [-122.224433, 47.481002],
+                  [-122.224433, 47.734136],
+                  [-122.459696, 47.734136],
+                  [-122.459696, 47.481002]
+                ]]
+              }
+            }
+          });
+        });
       }
+
     }
 
   });
