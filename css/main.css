@@ -297,7 +297,28 @@ h2 {
 }
 
 .scene:last-child {
-    margin-bottom: 100vh;
+    margin-bottom: 0vh;
+}
+
+/* For the image at the bottom fill */
+.final-hero-break {
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.final-hero-break img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
+    
+    display: block;
+    border: none;
 }
 
 .scene h2 {

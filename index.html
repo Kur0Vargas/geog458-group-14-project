@@ -24,12 +24,22 @@
     </video>
     <div id="intro">
       <h1>Seattle Traffic & Environmental Impact</h1>
-      <h5>This line is a place holder for subtitle</h5>
+      <h5>GEOG458 - Group 14</h5>
       <p>Washington is renowned for its lush, green landscapes—but how does Seattle's bustling urban transportation network affect the environmental conditions of surrounding neighborhoods? This interactive study explores the spatial relationship between high-traffic road networks, pollution exposure, and Seattle's urban greenery.</p>
 
       <div class="footnote">
-        <span> This line is a place holder for copyright note or other footnotes.</span>
-        <a target="_blank" href="https://www.uw.edu"> <img src="img/uw_logo.png" width="50px"></a>
+          <span>
+              <a target="_blank" href="https://www.uw.edu">
+                  <img src="img/uw_logo.png" width="50px" alt="UW Logo" style="vertical-align: middle; margin-right: 10px;">
+                  UW Homepage
+              </a>
+          </span>
+
+          <span style="margin-left: 15px; border-left: 1px solid #666; padding-left: 15px;">
+              <a href="https://github.com/Kur0Vargas/GEOG458-Group-14-Project" target="_blank">
+                  <i class="bi bi-github"></i> GitHub Repo
+              </a>
+          </span>
       </div>
     </div>
   </section>
@@ -58,7 +68,23 @@
 </div>
     </div>
     <article class="scene" data-scene="0"> 
-      <h2>Showing overview of Seattle</h2>
+      <h2><i class="bi bi-water"></i> Seattle: A City in Motion</h2>
+      <p>Seattle has long defined itself as a premier <strong>global port city</strong>, a gateway of commerce that never stands still. From its maritime roots to its status as a global hub for aviation and cloud computing, the city is defined by a culture of constant innovation and heavy investment in technology.</p>
+      
+      <div class="data-callout">
+          <i class="bi bi-cpu"></i>
+          <div>
+              <strong>Innovation & Industry</strong>
+              <p>As a magnet for tech giants and industrial leaders, Seattle's growth is fueled by a relentless drive for progress.</p>
+          </div>
+      </div>
+
+      <p>However, this "hustle and bustle" comes with a footprint. The same infrastructure that powers our economy creates a dense network of traffic. In these high-activity urban corridors, we often see significantly higher levels of pollution compared to the quieter, less populated regions of the Pacific Northwest.</p>
+
+      <div class="insight-box">
+          <h4><i class="bi bi-graph-up"></i> The Urban Trade-off</h4>
+          <p>Where innovation thrives, congestion often follows. This narrative explores the environmental cost of Seattle's rapid urban expansion.</p>
+      </div>
     </article>
     <article class="scene" data-scene="1">
             <h2><i class="bi bi-signpost-2"></i> Seattle's Traffic Network</h2>
@@ -83,29 +109,104 @@
     </article>
     <!-- add other maps here NEED TO WORK ON -->
     <article class="scene" data-scene="2">
-      <h2>Pollution dataset</h2>
+      <h2><i class="bi bi-broadcast-pin"></i> Statewide Washinngton Air Monitoring</h2>
+      <p>Beyond the city limits, air quality is monitored across the entire state of Washington. This network of sensors tracks our states air conditions, providing a baseline to compare urban centers against rural landscapes.</p>
+      
+      <p>Looking at the state as a whole, notice how "poor air quality days" are distributed. While wildfire smoke affects the entire region, localized industrial and transit-related pollution creates persistent signatures in our most populated zones.</p>
+
+      <div class="viz-link">
+        <i class="bi bi-info-circle"></i> <strong>Interactive Feature:</strong> Click on any sensor point to see the specific percentage of poor air quality days recorded at that station.
+      </div>
+
+      <div class="key-findings">
+          <h4>Key Patterns to Observe</h4>
+          <ul>
+              <li><span style="color: #7E0023; font-weight: bold;">Deep Maroon</span> points indicate 15%+ days of poor air quality</li>
+              <li><span style="color: #E63946; font-weight: bold;">Red & Orange</span> dots highlight moderate risk zones (3–10%)</li>
+              <li><span style="color: #2D5F3F; font-weight: bold;">Green points</span> represent areas with pristine air (0–1%)</li>
+              <li><strong>Circle Size:</strong> Larger circles indicate higher severity and frequency of pollutants.</li>
+          </ul>
+      </div>
     </article>
-    <article class="scene" data-scene="3">
-      <h2>Combined data set</h2>
+  <!-- Bootstrap icons ref >> https://icons.getbootstrap.com-->
+   <article class="scene" data-scene="3"> 
+      <h2><i class="bi bi-intersect"></i> Combined Spatial Analysis</h2>
+      
+      <p>By overlaying the traffic network with our air quality points, a spatial correlation emerges in the Seattle metropolitan area. As we focus on the city core, we see the high-volume <strong>red and yellow tracks</strong> cutting a vertical path from North to South through the city's center.</p>
+
+      <p>The pollution data points throughout the immediate Seattle area remain predominantly <strong>yellow</strong>, indicating a consistent 1–3% range of Poor Air Quality Days annually. However, as the we move further <strong>South</strong>, these points shift toward a deeper <strong>orange</strong>, signaling an increase in environmental burden as industrial density increases.</p>
+
+      <p>Interestingly, the residential and park-heavy roads along the <strong>waterfronts</strong> to both the West and East remain significantly <strong>green</strong>. These lower traffic volumes correlate with more stable air conditions, highlighting the sharp contrast between Seattle’s bustling transit spine and its more protected coastal spaces.</p>
     </article>
-    <article class="scene" data-scene="4"> 
-      <h2>Hotspot traffic</h2> 
+    <article class="scene" data-scene="4">
+      <h2><i class="bi bi-geo-alt-fill"></i> Traffic Hotspot Analysis</h2>
+      
+      <p>Comparison of traffic flow reveals a higher density of high-volume routes approaching from the <strong>North side</strong> compared to the South. This suggests a plethora of external factors, ranging from a more spread-out workforce residency in Northern Seattle to tourism traffic arriving via the <strong>I-5 corridor</strong> from the Canadian border.</p>
+
+      <div class="data-callout">
+          <i class="bi bi-exclamation-triangle"></i>
+          <div>
+              <strong>Variable Limitation</strong>
+              <p>This analysis relies on a limited set of variables. </p>
+              <p>We cannot definitively infer causation between route density and the specific demographic or economic shiftsinn the area without further data.</p>
+          </div>
+      </div>
     </article>
     <article class="scene" data-scene="5">
-      <h2>Hotspot pollution </h2>
+      <h2><i class="bi bi-wind"></i> Pollution Hotspot Analysis</h2>
+      
+      <p>The southern region of Seattle displays a higher concentration of <strong>air quality points</strong>. This density likely reflects the proximity to industrial zones and residential areas deeper within Washington's interior. Unlike the Northern traffic web, the South relies on a primary transit route flowing from the <strong>Burien area</strong> directly into the city core.</p>
+
+      <div class="data-callout">
+          <i class="bi bi-shield-exclamation"></i>
+          <div>
+              <strong>Causation Warning</strong>
+              <p>While spatial patterns exist, the lack of wind-pattern data and specific emission source types prevents a complete inferential analysis of the pollution's origin.</p>
+          </div>
+      </div>
     </article>
     <article class="scene" data-scene="6">
       <h2>Hotspot combined analysis </h2>
     </article>
     <article class="scene fullscreen" data-scene="7">
-      <h2>Hotspot analysis </h2>
+      <h2>Are we going to add something on this? </h2>
     </article>
 
   </section>
 
+  <div class="final-hero-break">
+    <img src="https://cdn.pixabay.com/photo/2016/11/21/16/01/buildings-1846133_1280.jpg" alt="Seattle Skyline">
+  </div>
+  
+
   <section id="footer">
-    <h2>FOOTER</h2>
-  </section>
+  <div class="footer-container">
+    <div class="footer-col">
+      <h2>Data Sources</h2>
+      <ul class="data-links">
+        <li>
+          <div>
+            <strong>Seattle Traffic Flow Counts</strong><br>
+            <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::traffic-study-flow-counts/about" target="_blank">Historical Study Data</a> | 
+            <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::2022-traffic-flow-counts/about" target="_blank">2022 Annual Report</a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>Washington Air Quality Advisory</strong><br>
+            <a href="https://airqualitymap.ecology.wa.gov" target="_blank">WA Department of Ecology Monitoring Network</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col footer-about">
+      <h2>About this Project</h2>
+      <p>This GeoNarrative was developed to visualize the intersection of urban mobility and environmental health in the Seattle Metropolitan area.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
   <script src="js/main.js"></script>
