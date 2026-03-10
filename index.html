@@ -21,8 +21,13 @@
     <button id="nav-toggle">Menu</button>
     <div class="nav-links">
       <a class="nav-btn" href="index.html">Home</a>
-      <button class="nav-btn active" data-layer="traffic">Traffic</button>
-      <button class="nav-btn" data-layer="aqi">AQI</button>
+      <a class="nav-btn" href="#city-motion">City in Motion</a>
+      <a class="nav-btn" href="#traffic-network">Traffic Network</a>
+      <a class="nav-btn" href="#air-monitoring">Air Monitoring</a>
+      <a class="nav-btn" href="#combined-analysis">Combined Analysis</a>
+      <a class="nav-btn" href="#traffic-hotspot">Traffic Hotspot</a>
+      <a class="nav-btn" href="#pollution-hotspot">Pollution Hotspot</a>
+      <a class="nav-btn" href="#combined-hotspot">Hotspot Combined Analysis</a>
       <a class="nav-btn" href="about.html">About</a>
     </div>
   </div>
@@ -76,7 +81,7 @@
       </div>
 </div>
     </div>
-    <article class="scene" data-scene="0"> 
+    <article id= "city-motion" class="scene" data-scene="0"> 
       <h2><i class="bi bi-water"></i> Seattle: A City in Motion</h2>
       <p>Seattle has long defined itself as a premier <strong>global port city</strong>, a gateway of commerce that never stands still. From its maritime roots to its status as a global hub for aviation and cloud computing, the city is defined by a culture of constant innovation and heavy investment in technology.</p>
       
@@ -95,7 +100,7 @@
           <p>Where innovation thrives, congestion often follows. This narrative explores the environmental cost of Seattle's rapid urban expansion.</p>
       </div>
     </article>
-    <article class="scene" data-scene="1">
+    <article id="traffic-network" class="scene" data-scene="1">
             <h2><i class="bi bi-signpost-2"></i> Seattle's Traffic Network</h2>
             <p>Seattle's road network serves over 750,000 residents and handles millions of vehicle trips annually. Our analysis focuses on high-traffic corridors where vehicle movement is most concentrated.</p>
             <p>The map shows traffic flow intensity across major roads, with colors indicating Annual Average Daily Traffic (AWDT). Notice how traffic concentrates along key arterials connecting downtown to surrounding neighborhoods.</p>
@@ -117,8 +122,8 @@
             </div>
     </article>
     <!-- add other maps here NEED TO WORK ON -->
-    <article class="scene" data-scene="2">
-      <h2><i class="bi bi-broadcast-pin"></i> Statewide Washinngton Air Monitoring</h2>
+    <article id="air-monitoring" class="scene" data-scene="2">
+      <h2><i class="bi bi-broadcast-pin"></i> Statewide Washington Air Monitoring</h2>
       <p>Beyond the city limits, air quality is monitored across the entire state of Washington. This network of sensors tracks our states air conditions, providing a baseline to compare urban centers against rural landscapes.</p>
       
       <p>Looking at the state as a whole, notice how "poor air quality days" are distributed. While wildfire smoke affects the entire region, localized industrial and transit-related pollution creates persistent signatures in our most populated zones.</p>
@@ -138,7 +143,7 @@
       </div>
     </article>
   <!-- Bootstrap icons ref >> https://icons.getbootstrap.com-->
-   <article class="scene" data-scene="3"> 
+   <article id="combined-analysis" class="scene" data-scene="3"> 
       <h2><i class="bi bi-intersect"></i> Combined Spatial Analysis</h2>
       
       <p>By overlaying the traffic network with our air quality points, a spatial correlation emerges in the Seattle metropolitan area. As we focus on the city core, we see the high-volume <strong>red and yellow tracks</strong> cutting a vertical path from North to South through the city's center.</p>
@@ -147,7 +152,7 @@
 
       <p>Interestingly, the residential and park-heavy roads along the <strong>waterfronts</strong> to both the West and East remain significantly <strong>green</strong>. These lower traffic volumes correlate with more stable air conditions, highlighting the sharp contrast between Seattle’s bustling transit spine and its more protected coastal spaces.</p>
     </article>
-    <article class="scene" data-scene="4">
+    <article id="traffic-hotspot" class="scene" data-scene="4">
       <h2><i class="bi bi-geo-alt-fill"></i> Traffic Hotspot Analysis</h2>
       
       <p>Comparison of traffic flow reveals a higher density of high-volume routes approaching from the <strong>North side</strong> compared to the South. This suggests a plethora of external factors, ranging from a more spread-out workforce residency in Northern Seattle to tourism traffic arriving via the <strong>I-5 corridor</strong> from the Canadian border.</p>
@@ -161,7 +166,7 @@
           </div>
       </div>
     </article>
-    <article class="scene" data-scene="5">
+    <article id="pollution-hotspot" class="scene" data-scene="5">
       <h2><i class="bi bi-wind"></i> Pollution Hotspot Analysis</h2>
       
       <p>The southern region of Seattle displays a higher concentration of <strong>air quality points</strong>. This density likely reflects the proximity to industrial zones and residential areas deeper within Washington's interior. Unlike the Northern traffic web, the South relies on a primary transit route flowing from the <strong>Burien area</strong> directly into the city core.</p>
@@ -174,7 +179,7 @@
           </div>
       </div>
     </article>
-    <article class="scene" data-scene="6">
+    <article id="combined-hotspot" class="scene" data-scene="6">
       <h2>Hotspot combined analysis </h2>
     </article>
 
