@@ -301,7 +301,7 @@ h2 {
 }
 
 .scene h2 {
-    color: var(--emerald-green);
+    color: var(--clean-white);
     margin-bottom: 1.5rem;
     padding-bottom: 0.75rem;
     border-bottom: 3px solid var(--sky-blue);

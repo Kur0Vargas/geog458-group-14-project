@@ -8,7 +8,7 @@ window.addEventListener("resize", adjustStoryboardlSize);
 function adjustStoryboardlSize() {
   const scenes = document.getElementsByClassName("scene");
   const storyboard = document.getElementById("storyboard");
-  let sceneH = Math.floor(window.innerHeight * 0.75);
+  let sceneH = Math.floor(window.innerHeight * 1);
   for (const scene of scenes) {
     scene.style.height = sceneH + "px";
   }
@@ -25,15 +25,16 @@ map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/dark-v10',
   center: [-122.3321, 47.6062],
-  zoom: 7,
+  zoom: 8,
   minZoom: 3,
-  maxZoom: 10,
+  maxZoom: 15,
   pitch: 30,
   bearing: -10,
   scrollZoom: false,
-  boxZoom: false,
-  doubleClickZoom: false
+  boxZoom: true,
+  doubleClickZoom: true
 });
+map.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
 
 async function geojsonFetch() {
   let response, traffic;
