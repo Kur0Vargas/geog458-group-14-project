@@ -773,6 +773,14 @@ h2 {
     margin:0 50px;
 }
 
+.about-section .data-links a {
+    color: #06A8E8;
+    transition: color 0.3s ease;
+}
+
+.about-section .data-links a:hover {
+    color: #F77F00;   
+}
 #footer {
     background: #1f2937;
     color: white;
