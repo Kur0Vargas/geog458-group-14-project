@@ -8,9 +8,9 @@ window.addEventListener("resize", adjustStoryboardlSize);
 function adjustStoryboardlSize() {
   const scenes = document.getElementsByClassName("scene");
   const storyboard = document.getElementById("storyboard");
-  let sceneH = Math.floor(window.innerHeight * 1);
+  let sceneH = Math.floor(window.innerHeight * 0.75);
   for (const scene of scenes) {
-    scene.style.height = sceneH + "px";
+    scene.style.minHeight = sceneH + "px";
   }
   let storyboardHeight = window.innerHeight;
   let storyboardMarginTop = (window.innerHeight - storyboardHeight) / 2;
