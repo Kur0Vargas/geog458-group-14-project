@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>About — Seattle Traffic & Environmental Impact</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <div id="about-page">
+
+    <div class="about-hero">
+      <h1>About This Project</h1>
+      <p class="subtitle">GEOG458 — Group 14 | University of Washington</p>
+    </div>
+
+    <div class="about-container">
+
+      <section class="about-section">
+        <h2><i class="bi bi-journal-text"></i> Project Overview</h2>
+        <p>This GeoNarrative was developed to visualize the intersection of urban mobility and environmental health in the Seattle Metropolitan area. Washington is renowned for its lush, green landscapes — but how does Seattle's bustling urban transportation network affect the environmental conditions of surrounding neighborhoods?</p>
+        <p>Using 2022 traffic flow counts and air quality monitoring data, we explore the spatial relationship between road movement intensity and pollution exposure across Seattle neighborhoods.</p>
+      </section>
+
+        <!-- TEAM SECTION -->
+        <section class="team">
+            <div class="container">
+                <h2>Meet the Team</h2>
+
+                <div class="team-container">
+
+                    <!-- Member 1 -->
+                    <div class="team-card">
+                        <img src="img/tinnapic.jpeg" alt="Profile Photo">
+                        <h3>Tinna Mokaramanee</h3>
+                        <p><ul>
+                            <li>HTML layout+ geonarrative page layout</li>
+                            <li>main.js for the geonarrative</li>
+                        </ul></p>
+                    </div>
+
+                    <!-- Member 2 -->
+                    <div class="team-card">
+                        <img src="" alt="Profile Photo">
+                        <h3>Nicolas</h3>
+                        <p><ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul></p>
+                    </div>
+
+                    <!-- Member 3 -->
+                    <div class="team-card">
+                        <img src="img/mimpic.jpeg" alt="Profile Photo">
+                        <h3>Anthony</h3>
+                        <p><ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul></p>
+                    </div>
+
+                    <!-- Member 4 -->
+                    <div class="team-card">
+                        <img src="" alt="Profile Photo">
+                        <h3>Ken Thuleeratanarom</h3>
+                        <p><ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul></p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+      <section class="about-section">
+        <h2><i class="bi bi-database"></i> Data Sources</h2>
+        <ul class="data-links">
+          <li>
+            <strong>Seattle Traffic Flow Counts</strong><br>
+            <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::traffic-study-flow-counts/about" target="_blank">Historical Study Data</a> | 
+            <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::2022-traffic-flow-counts/about" target="_blank">2022 Annual Report</a>
+          </li>
+          <li>
+            <strong>Washington Air Quality Advisory</strong><br>
+            <a href="https://airqualitymap.ecology.wa.gov" target="_blank">WA Department of Ecology Monitoring Network</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="about-section">
+        <h2><i class="bi bi-tools"></i> Tools & Methods</h2>
+        <ul>
+          <li>Mapbox GL JS for interactive web mapping</li>
+          <li>Scrollama for scroll-driven narrative</li>
+          <li>Python for data processing and GeoJSON conversion</li>
+          <li>Washington Ecology air monitoring network data (2022)</li>
+          <li>Seattle Open Data Portal traffic counts (2022)</li>
+        </ul>
+      </section>
+
+      <section class="about-section">
+        <h2><i class="bi bi-exclamation-circle"></i> Limitations</h2>
+        <p>This analysis is limited by the availability of air quality monitoring stations, which are not evenly distributed across Seattle. Traffic data is limited to Seattle city limits and does not capture regional commuter patterns from surrounding counties. Wind patterns and emission source types were not factored into this analysis.</p>
+      </section>
+
+    </div>
+
+    <footer id="footer">
+      <div class="footer-container">
+        <p>GEOG458 — Group 14 | University of Washington</p>
+        <a href="https://github.com/Kur0Vargas/GEOG458-Group-14-Project" target="_blank">
+          <i class="bi bi-github"></i> GitHub Repo
+        </a>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
