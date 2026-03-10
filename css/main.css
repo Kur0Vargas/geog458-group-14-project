@@ -812,7 +812,7 @@ h2 {
     z-index: 1000;
   }
   
-  .navbar.show {
+  .navbar:hover {
     transform: translateX(0);
   }
   
