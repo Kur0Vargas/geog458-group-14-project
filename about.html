@@ -9,10 +9,15 @@
 </head>
 <body>
 
-  <nav id="navbar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-  </nav>
+  <div id="navbar" class="navbar">
+    <button id="nav-toggle">Navigation Bar</button>
+    <div class="nav-links">
+      <a class="nav-btn" href="index.html">Home</a>
+      <button class="nav-btn active" data-layer="traffic">Traffic</button>
+      <button class="nav-btn" data-layer="aqi">AQI</button>
+      <a class="nav-btn" href="about.html">About</a>
+    </div>
+  </div>
 
   <div id="about-page">
 
@@ -127,6 +132,22 @@
     </footer>
 
   </div>
-
+  <!-- script for navbar -->
+  <script>
+    const navbar = document.getElementById('navbar');
+    const toggleBtn = document.getElementById('nav-toggle');
+    const navButtons = document.querySelectorAll('.nav-btn');
+    
+    
+    toggleBtn.addEventListener('click', () => {
+      navbar.classList.toggle('show');
+    });
+    
+    navButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        navButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });</script>
 </body>
 </html>

@@ -17,10 +17,15 @@
 </head>
 
 <body>
-  <nav id="navbar">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  </nav>
+  <div id="navbar" class="navbar">
+    <button id="nav-toggle">Menu</button>
+    <div class="nav-links">
+      <a class="nav-btn" href="index.html">Home</a>
+      <button class="nav-btn active" data-layer="traffic">Traffic</button>
+      <button class="nav-btn" data-layer="aqi">AQI</button>
+      <a class="nav-btn" href="about.html">About</a>
+    </div>
+  </div>
   <!-- cover page -->
   <section id="cover">
     <video class="fullscreen canvas-center" playsinline="" autoplay="" muted="" loop="">
@@ -208,10 +213,6 @@
     </div>
   </div>
 </section>
-
-
   <script src="js/main.js"></script>
-
 </body>
-
 </html>

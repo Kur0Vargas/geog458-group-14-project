@@ -407,8 +407,24 @@ async function geojsonFetch() {
       }
 
     }
-
+    
   });
 }
 
 geojsonFetch();
+// NAVBAR 
+const navbar = document.getElementById('navbar');
+const toggleBtn = document.getElementById('nav-toggle');
+const navButtons = document.querySelectorAll('.nav-btn');
+
+
+toggleBtn.addEventListener('click', () => {
+  navbar.classList.toggle('show');
+});
+
+navButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    navButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
