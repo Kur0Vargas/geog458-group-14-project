@@ -671,6 +671,7 @@ h2 {
 }
 
 /* Footer */
+
 #footer {
     width: 100%;
     min-height: 40vh;
@@ -678,6 +679,9 @@ h2 {
     color: var(--clean-white);
     padding: 3rem 0 2rem;
     border-top: 4px solid var(--emerald-green);
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 55px;
 }
 
 #footer h5 {
@@ -780,17 +784,6 @@ h2 {
 
 .about-section .data-links a:hover {
     color: #F77F00;   
-}
-#footer {
-    background: #1f2937;
-    color: white;
-    padding: 10px 0px;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 /* Responsive Design */
