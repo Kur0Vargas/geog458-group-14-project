@@ -827,14 +827,11 @@ h2 {
     font-size: 20px;
     border-radius: 4px;
   }
-  
-  /* Links container */
   .nav-links {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
-  
   .nav-btn {
     background: #333;
     color: white;
@@ -844,6 +841,10 @@ h2 {
     cursor: pointer;
     transition: background 0.2s ease;
   }
+  .navbar .nav-links a.nav-btn.navheader {
+    background: black;
+    font-weight: bold;
+}
 
   .nav-btn:hover {
     background: #555;
