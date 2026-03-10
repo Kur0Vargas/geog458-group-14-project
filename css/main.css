@@ -719,6 +719,72 @@ h2 {
     margin: 2rem 0;
 }
 
+/* about section */
+.about-hero {
+    max-width: 900px;     
+    margin: 0 auto;        
+    padding: 2rem 20px;    
+    text-align: center;     
+}
+
+.team-card li {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.team-card img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--clean-white);
+    margin: 0 60px;
+}
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+
+.team-card h3 {
+    margin-top: 10px;
+    margin-left: 35px;
+}
+
+.team-card ul {
+    padding-left: 0;
+    list-style: disc;
+    margin-top: 10px;
+}
+
+
+.about-section {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+}
+.about-section:last-child {
+    border-bottom: none;
+}
+.about-container {
+    margin:0 50px;
+}
+
+#footer {
+    background: #1f2937;
+    color: white;
+    padding: 10px 0px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     #intro {
