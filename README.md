@@ -15,9 +15,27 @@ https://kur0vargas.github.io/geog458-group-14-project/
 
 ## Project Description
 
+Seattle is widely known for its natural landscapes and environmental consciousness. However, the city is also a major hub for transportation, technology, and economic activity. With thousands of vehicles moving through the city every day, transportation infrastructure may contribute to localized environmental impacts.
+
+This project presents an interactive GeoNarrative web map that explores the spatial relationship between traffic intensity and environmental air quality conditions in Seattle and across Washington State.
+
+Using interactive mapping tools and scroll-driven storytelling, the project visualizes:
+
+- Traffic flow intensity across Seattle road networks
+
+- Air quality monitoring data from across Washington State
+
+- Spatial patterns where transportation infrastructure and environmental conditions intersect
+
+The goal is to help users explore how urban mobility systems may influence environmental conditions in different regions.
+
 ---
 
 ## Project Screenshot
+
+- ![Seattle's Traffic Volume](/img/screenshot1.png)
+
+- ![Combined Spatial Analysis](/img/screenshot1.png)
 
 ---
 
@@ -30,14 +48,7 @@ The target audience in this project will ideally be students, researchers, and t
 
 ---
 
-## Project Overview
-// Will remove later
-
-Our group is looking to create an interactive web map that visualizes the environmental conditions and movement patterns in Seattle using the high-traffic road networks alongside pollution exposure on the surrounding greenery. The idea was brought to us due to the reputation of Washington being known for its natural and green environment, yet urban transportation systems may be a driving cause in localized pollution exposure. The purpose of this project is to examine the spatial relationship between road movement intensity and the environmental conditions across Seattle neighborhoods (pollution) using the web-based mapping tools we've learned.
-
 ## Data Sources
-
----
 
 ### Seattle Open Data Portal
 👉 *[Traffic Study Flow Counts](https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::traffic-study-flow-counts/about)*
