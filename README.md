@@ -87,6 +87,12 @@ Urban planners and policy makers may also find the visualization useful when con
 
 ---
 
+## Improvements after feedback
+- The AQI layer color scheme was redesigned from a green-to-red gradient to a pink-to-indigo palette ensuring clear visual distinction from the traffic flow layer which uses its own green-to-red scale — preventing color confusion when both layers are displayed simultaneously in the combined analysis scenes.
+- The AQI legend was updated to display circular markers instead of line segments, accurately reflecting how the air quality monitoring stations appear on the map as point features rather than road segments.
+
+---
+
 ## AI Disclosure
 
 - AI used for ......
