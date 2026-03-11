@@ -37,7 +37,7 @@ The goal is to help users explore how urban mobility systems may influence envir
 ![Seattle's Traffic Volume](/img/screenshot1.png)
 
 - Combined Spatial Analysis
-![Combined Spatial Analysis](/img/screenshot1.png)
+![Combined Spatial Analysis](/img/screenshot2.png)
 
 ---
 
