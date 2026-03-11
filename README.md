@@ -15,7 +15,7 @@ https://kur0vargas.github.io/geog458-group-14-project/
 
 ## Project Description
 
-Seattle is widely known for its natural landscapes and environmental consciousness. However, the city is also a major hub for transportation, technology, and economic activity. With thousands of vehicles moving through the city every day, transportation infrastructure may contribute to localized environmental impacts.
+Seattle has always been known for its wildlife and as a global port city. A place for technological advancement and commerce, as well as the beautiful wildlife surrounding the city. With multiple corporations that have set roots in the city and the rising number of employment, there are likely to be issues regarding traffic, thus leading to our investigation into its effects on air pollution.
 
 This project presents an interactive GeoNarrative web map that explores the spatial relationship between traffic intensity and environmental air quality conditions in Seattle and across Washington State.
 
@@ -33,9 +33,11 @@ The goal is to help users explore how urban mobility systems may influence envir
 
 ## Project Screenshot
 
-- ![Seattle's Traffic Volume](/img/screenshot1.png)
+- Seattle's Traffic Volume
+![Seattle's Traffic Volume](/img/screenshot1.png)
 
-- ![Combined Spatial Analysis](/img/screenshot1.png)
+- Combined Spatial Analysis
+![Combined Spatial Analysis](/img/screenshot1.png)
 
 ---
 
