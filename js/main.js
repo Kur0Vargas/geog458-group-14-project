@@ -118,12 +118,12 @@ async function geojsonFetch() {
           ['*', ['get', 'days_unhealthy_or_worse'], 100], 
           ['get', 'total_days']
         ],
-        0, '#2D5F3F',    // 0% - Good
-        1, '#FCBF49',    // 1% - starting to show issues
-        3, '#F77F00',    // 3% - moderate concern
-        6, '#E63946',    // 6% - unhealthy
-        10, '#7B2D8B',   // 10% - very unhealthy
-        15, '#7E0023'    // 15%+ - hazardous
+        0,  '#FFF0F5',   // 0% - near white pink
+        1,  '#FFB3D1',   // 1% - light pink
+        3,  '#FF6B9D',   // 3% - pink
+        6,  '#C71585',   // 6% - deep pink
+        10, '#8B008B',   // 10% - dark magenta
+        15, '#4B0082'    // 15%+ - indigo
       ],
 
       'circle-radius': [
