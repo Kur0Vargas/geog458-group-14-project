@@ -46,7 +46,15 @@ The goal is to help users explore how urban mobility systems may influence envir
 ---
 
 ## Target Audience
-The target audience in this project will ideally be students, researchers, and the general public who are interested in the conditions in Seattle's traffic scene. Policy planners and government officials may benefit from this type of content, but the aforementioned will likely find themselves aligned with this project more so than the latter.
+This project is designed for:
+
+- Students studying geography, urban planning, or environmental science
+
+- Researchers interested in urban mobility and environmental exposure
+
+- Members of the public who want to better understand Seattle’s transportation patterns
+
+Urban planners and policy makers may also find the visualization useful when considering environmental and transportation planning decisions.
 
 ---
 
