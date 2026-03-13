@@ -43,6 +43,10 @@ The goal is to help users explore how urban mobility systems may influence envir
 
 ## Project Goal
 
+Our goal for this project was to visualize and explore the spatial relationship between transportation movement and ennvironmental air quality in the Seattle regionn. By combining trafficc flow datasets with our chosen air quality moonitoring data, this project aims to highlight areas where high levls of roadway movement may coincide with environmental pollution patterns. With the choice of an interactive GeoNarrative web map, our aim for our audience is being able to show how transportation infrastructure and urban mobility systems intersect with environmental conditions across Seattle and Washington State. The project is intendedd to make complex spatial data more accessible by presenting it through an interactive mapping interface that allows users to navigate through our data scenes and observe patterns in certain hotspots for both traffic intensity and air quality indicators.
+
+Ultimately, the project seeks to encourage greater awareness of how urban transportation networks may influence environmental conditions and public health in metropolitan areas. By visualizing these patterns, the map can support discussions around urban planning, sustainability, and environmental monitoring while providing an educational tool for students, researchers, and the broader public.
+
 ---
 
 ## Target Audience
@@ -66,7 +70,7 @@ Urban planners and policy makers may also find the visualization useful when con
 👉 *[2022 Traffic Flow Counts](https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::2022-traffic-flow-counts/about)*
 
 ### Air Quality Data
-👉 *[2022 Traffic Flow Counts](https://airqualitymap.ecology.wa.gov)*
+👉 *[Washington Department of Ecology Air Quality Advisory](https://airqualitymap.ecology.wa.gov)*
 
 ---
 
@@ -84,6 +88,11 @@ Urban planners and policy makers may also find the visualization useful when con
 ---
 
 ## Limitations
+
+Some limitations this project contains are:
+- Limited amount of variables that are a subset of many more features that influence air pollution levels.
+- Traffic flow counts do not provide vehicle types, traffic speed, fluctuations in traffic patterns, or maintenance days.
+- Environmental factors or specific types of emissions like weather conditions, seasonal changes, or industrial emissions.
 
 ---
 
