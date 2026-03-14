@@ -104,4 +104,4 @@ Some limitations this project contains are:
 
 ## AI Disclosure
 
-- AI used for ......
+- No AI tools were used in this assignment.
